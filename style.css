@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Montserrat:wght@400;700&display=swap');
 
 body {
-    background: linear-gradient(to bottom right, #e3f2fd, #fce4ec), 
-                url('my-image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-blend-mode: overlay;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    background: linear-gradient(to bottom right, #e3f2fd, #fce4ec); /* Very Light Blue with a Hint of Soft Pink */
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 /* 💖 Main Container */
