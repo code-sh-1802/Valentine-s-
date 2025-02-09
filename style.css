@@ -3,8 +3,8 @@
 body {
     font-family: 'Dancing Script', cursive;
     text-align: center;
-    background: linear-gradient(to bottom right, #e0f7fa, #fce4ec); /* Light Blue & Light Pink */
-    color: #444; /* Soft Dark Grey for contrast */
+    background: linear-gradient(to bottom right, #e3f2fd, #fce4ec); /* Very Light Blue with a Hint of Soft Pink */
+    color: #333;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -16,9 +16,9 @@ body {
 .container {
     max-width: 600px;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.4); /* Softer Transparent White */
+    background: rgba(255, 255, 255, 0.6); /* Softer Transparent White */
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(100, 181, 246, 0.3); /* Soft Blue Glow */
+    box-shadow: 0 10px 20px rgba(144, 202, 249, 0.3); /* Soft Blue Glow */
     backdrop-filter: blur(15px);
     animation: fadeIn 1.5s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -28,14 +28,14 @@ body {
 h1 {
     font-size: 38px;
     font-weight: 700;
-    color: #64b5f6; /* Light Blue */
-    text-shadow: 2px 2px 10px rgba(100, 181, 246, 0.3);
+    color: #90caf9; /* Very Light Blue */
+    text-shadow: 2px 2px 10px rgba(144, 202, 249, 0.3);
 }
 
 p {
     font-size: 20px;
     font-weight: 500;
-    color: #333; /* Darker for better readability */
+    color: #444;
     line-height: 1.5;
 }
 
@@ -47,17 +47,17 @@ p {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    background: linear-gradient(to right, #64b5f6, #ff80ab); /* Light Blue & Light Pink */
+    background: linear-gradient(to right, #bbdefb, #f8bbd0); /* Very Light Blue & Soft Pink */
     border: none;
     border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(100, 181, 246, 0.4);
+    box-shadow: 0 5px 15px rgba(144, 202, 249, 0.4);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(100, 181, 246, 0.5);
+    box-shadow: 0 10px 25px rgba(144, 202, 249, 0.5);
 }
 
 /* 💙 Link Styles */
@@ -65,13 +65,13 @@ p {
     display: inline-block;
     margin-top: 20px;
     font-size: 20px;
-    color: #64b5f6; /* Light Blue */
+    color: #90caf9; /* Very Light Blue */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .link:hover {
-    color: #ff80ab; /* Light Pink */
+    color: #f8bbd0; /* Soft Pink */
 }
 
 /* 💖 Floating Hearts */
@@ -85,7 +85,7 @@ p {
 
 .heart {
     position: absolute;
-    color: rgba(100, 181, 246, 0.8); /* Soft Light Blue Hearts */
+    color: rgba(144, 202, 249, 0.8); /* Soft Light Blue Hearts */
     font-size: 22px;
     animation: floatUp 5s infinite ease-in-out;
 }
@@ -102,18 +102,18 @@ p {
     border-radius: 10px;
     margin: 10px 0;
     animation: fadeIn 1s ease-in-out;
-    box-shadow: 0 5px 15px rgba(100, 181, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(144, 202, 249, 0.3);
 }
 
 .timeline .event h2 {
     animation: heartbeat 1.5s infinite alternate;
-    color: #ff4081; /* Soft Pink */
+    color: #f8bbd0; /* Soft Pink */
 }
 
 /* 💙 Heartbeat Animation */
 .heart-animation {
     font-size: 50px;
-    color: #64b5f6; /* Light Blue */
+    color: #90caf9; /* Light Blue */
     animation: heartbeat 1s infinite alternate;
 }
 
