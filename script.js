@@ -5,10 +5,10 @@ function startJourney() {
     music.play();
   }
   // Wait a short moment for the music to start, then navigate to the love story page
-  setTimeout(() => {
+  
     window.location.href = "love-story.html";
-  }, 1500);
 }
+
 
 // Floating Hearts Animation
 function createFloatingHearts() {
