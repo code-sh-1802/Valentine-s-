@@ -199,4 +199,17 @@ p {
   height: 80px;
   margin-bottom: 10px;
 }
+/* Mobile Responsiveness for Gift Cards */
+@media (max-width: 600px) {
+  .gift-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .gift-card {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
+
 
