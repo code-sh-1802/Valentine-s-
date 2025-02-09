@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun Love Game - Happy Valentine's Day! 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <!-- Background Music (plays on every page) -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Floating Hearts -->
+  <div class="hearts-container"></div>
+
+  <div class="container game-container">
+    <h1>Let's Play a Love Game! 💖</h1>
+    <p>Click on all the hearts to reveal a secret love message! 😘</p>
+    <button id="start-game" class="btn">Start Game</button>
+    
+    <!-- Game Area: Hearts will appear here -->
+    <div id="game-area" class="game-area"></div>
+    
+    <!-- Secret message revealed when the game is complete -->
+    <div id="secret-message" class="secret-message hidden">
+      <h2>You Did It! ❤️</h2>
+      <p>My love for you is endless. Happy Valentine's Day, my darling!</p>
+      <a href="index.html" class="link">Return Home ➝😊</a>
+    </div>
+  </div>
+</body>
+</html>
