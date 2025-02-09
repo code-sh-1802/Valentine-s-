@@ -135,3 +135,68 @@ p {
     font-size: 2em;
   }
 }
+/* Gift Cards Container */
+.gift-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Each Gift Card */
+.gift-card {
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+/* Inner Card (for flip effect) */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Flip the card on hover */
+.gift-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card faces */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Front Face Styling */
+.card-front {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+}
+
+/* Back Face Styling */
+.card-back {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+/* Gift Icon Styling */
+.gift-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
