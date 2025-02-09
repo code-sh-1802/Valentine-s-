@@ -199,17 +199,32 @@ p {
   height: 80px;
   margin-bottom: 10px;
 }
-/* Mobile Responsiveness for Gift Cards */
+/* For mobile devices: allow scrolling and adjust alignment */
 @media (max-width: 600px) {
+  body {
+    min-height: 100vh;      /* Use minimum height instead of fixed height */
+    overflow-y: auto;       /* Allow vertical scrolling */
+    align-items: flex-start; /* Align items to the top */
+    padding-top: 20px;      /* Add some padding at the top */
+  }
+  
+  /* Optional: adjust the container margin to prevent clipping */
+  .container {
+    margin-bottom: 20px;
+  }
+  
+  /* Ensure gift cards stack in a single column */
   .gift-cards {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
+  
   .gift-card {
     width: 90%;
     margin: 10px 0;
   }
 }
+
 
 
