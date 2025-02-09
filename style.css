@@ -328,4 +328,83 @@ p {
   border-radius: 10px;
   color: #333;
 }
+/* Game Area for all levels */
+.game-area {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+/* Base style for hearts used in games */
+.game-heart {
+  position: absolute;
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.game-heart:hover {
+  transform: scale(1.2);
+}
+
+/* Pop animation: shrink and fade out when clicked */
+.game-heart.pop {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Additional style for falling hearts (Level 2) */
+.fall-heart {
+  /* Inherits position and font-size from .game-heart */
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+/* Falling animation for Level 2 hearts */
+@keyframes fall {
+  from { top: -10%; opacity: 1; }
+  to { top: 100%; opacity: 0; }
+}
+
+/* Shake animation for incorrect clicks in the Order game (Level 3) */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Style for the level completion message box */
+.level-message {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(to right, #A2D2FF, #FFC1E3);
+  border-radius: 10px;
+  color: #333;
+}
+
+/* Style for the digital gift images */
+.gift-img {
+  max-width: 100px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Final message style for the winning declaration */
+.final-message {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(to right, #FFD3E0, #FFB6C1);
+  border-radius: 10px;
+  color: #333;
+}
+
 
