@@ -271,3 +271,61 @@ p {
 .hidden {
   display: none;
 }
+/* Additional styles for the level-based game */
+
+/* Level Game Area (the container where hearts appear) */
+#level-game-area {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+/* Style for the hearts in the level game */
+.game-heart {
+  position: absolute;
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.game-heart:hover {
+  transform: scale(1.2);
+}
+
+/* Pop animation for hearts when clicked */
+.game-heart.pop {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Message box for level completion */
+.level-message {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(to right, #A2D2FF, #FFC1E3);
+  border-radius: 10px;
+  color: #333;
+}
+
+/* Style for the digital gift image */
+.gift-img {
+  max-width: 100px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Final message style for the last level */
+.final-message {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(to right, #FFD3E0, #FFB6C1);
+  border-radius: 10px;
+  color: #333;
+}
+
