@@ -407,4 +407,61 @@ p {
   color: #333;
 }
 
+/* Flower Selection Area */
+.flower-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.flower-selection .flower {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.flower-selection .flower:hover {
+  transform: scale(1.1);
+}
+
+/* Bouquet Container */
+.bouquet-container {
+  margin: 20px 0;
+}
+
+.bouquet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  min-height: 100px;
+  border: 2px dashed #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bouquet-flower {
+  width: 60px;
+  height: 60px;
+}
+
+/* Final Message */
+.final-message {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(to right, #FFD3E0, #FFB6C1);
+  border-radius: 10px;
+  color: #333;
+}
+
+/* Utility class to hide elements */
+.hidden {
+  display: none;
+}
+
+
 
