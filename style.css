@@ -462,6 +462,28 @@ p {
 .hidden {
   display: none;
 }
+/* Fireworks Canvas Styling */
+#fireworks-canvas {
+  background: #000; /* Black background to make fireworks pop */
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* Final Message Styling (reusing style from previous pages) */
+.final-message {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(to right, #FFD3E0, #FFB6C1);
+  border-radius: 10px;
+  color: #333;
+  text-align: center;
+}
+
+/* Utility class to hide elements */
+.hidden {
+  display: none;
+}
 
 
 
