@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
   let particles = [];
   let fireworksCount = 0;
   
+  // Define the messages to display (in sequence)
+  const fireworkMessages = ["I", "love", "you", "forever", "Happy Valentine's Day!"];
+  let messageIndex = 0;
+  
   // Particle constructor for each firework particle
   function Particle(x, y, color) {
     this.x = x;
@@ -39,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ctx.restore();
   }
   
-  // Create a firework explosion at (x, y)
+  // Create a firework explosion at (x, y) and display a message if available
   function createFirework(x, y) {
     const colors = ["#ff4b5c", "#ff758c", "#ffc1e3", "#a2d2ff"];
     const color = colors[Math.floor(Math.random() * colors.length)];
@@ -47,19 +51,45 @@ document.addEventListener("DOMContentLoaded", function() {
       particles.push(new Particle(x, y, color));
     }
     fireworksCount++;
+    
+    // If there are messages left in the sequence, display the next one at the burst location.
+    if (messageIndex < fireworkMessages.length) {
+      displayFireworkMessage(x, y, fireworkMessages[messageIndex]);
+      messageIndex++;
+    }
+    
     if (fireworksCount >= 5) {
-      // After 5 fireworks, reveal the surprise button
+      // After 5 fireworks, reveal the surprise button.
       surpriseButton.classList.remove("hidden");
     }
   }
   
+  // Create a temporary message element at (x, y) that fades out.
+  function displayFireworkMessage(x, y, msg) {
+    const messageElem = document.createElement("div");
+    messageElem.className = "firework-message";
+    messageElem.textContent = msg;
+    
+    // Get canvas position relative to the document.
+    const rect = canvas.getBoundingClientRect();
+    messageElem.style.left = (x + rect.left) + "px";
+    messageElem.style.top = (y + rect.top) + "px";
+    
+    document.body.appendChild(messageElem);
+    
+    // Remove the message element after its animation (2s).
+    setTimeout(() => {
+      messageElem.remove();
+    }, 2000);
+  }
+  
   // Animation loop for the fireworks
   function animate() {
-    // Fade effect for trails
+    // Fade effect for trails.
     ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    // Update and draw each particle
+    // Update and draw each particle.
     for (let i = particles.length - 1; i >= 0; i--) {
       let p = particles[i];
       p.update();
@@ -71,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
     requestAnimationFrame(animate);
   }
   
-  // Launch a firework on canvas click
+  // Launch a firework on canvas click.
   canvas.addEventListener("click", function(e) {
     const rect = canvas.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -79,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
     createFirework(x, y);
   });
   
-  // When the surprise button is clicked, hide the canvas and show the final message
+  // When the surprise button is clicked, hide the canvas and show the final message.
   surpriseButton.addEventListener("click", function() {
     canvas.style.display = "none";
     surpriseButton.classList.add("hidden");
