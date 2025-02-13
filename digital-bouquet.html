@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Bouquet - A Token of My Love 💐</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="digital-bouquet.js"></script>
+</head>
+<body>
+  <!-- Background Music (plays on every page) -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Floating Hearts for extra romance -->
+  <div class="hearts-container"></div>
+
+  <div class="container">
+    <h1>Build Your Digital Bouquet 💐</h1>
+    <p>Select the flowers that remind you of our love. Each flower holds a special meaning🙂</p>
+    
+    <!-- Flower Selection Area -->
+    <div id="flower-selection" class="flower-selection">
+      <!-- Replace these image sources with your own flower icons -->
+      <img src="rose.png" alt="Rose" data-flower="Rose" class="flower">
+      <img src="lily.png" alt="Lily" data-flower="Lily" class="flower">
+      <img src="tulip.png" alt="Tulip" data-flower="Tulip" class="flower">
+      <img src="daisy.png" alt="Daisy" data-flower="Daisy" class="flower">
+      <img src="orchid.png" alt="Orchid" data-flower="Orchid" class="flower">
+    </div>
+    
+    <!-- Bouquet Container to display selected flowers -->
+    <div id="bouquet-container" class="bouquet-container">
+      <h2>Your Bouquet</h2>
+      <div id="bouquet" class="bouquet"></div>
+    </div>
+    
+    <!-- Button to complete the bouquet -->
+    <button id="complete-bouquet" class="btn hidden">Complete Bouquet</button>
+    
+    <!-- Final message displayed after bouquet is completed -->
+    <div id="final-message" class="final-message hidden">
+      <h2>Just like this bouquet, my love for you is a collection of every beautiful moment we've shared. Happy Valentine's Day love 🩷</h2>
+      <a href="index.html" class="link">Return Home ➝😊</a>
+    </div>
+  </div>
+</body>
+</html>
